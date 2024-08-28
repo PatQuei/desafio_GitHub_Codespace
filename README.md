@@ -1,6 +1,8 @@
-# **Explicações Educativas de Blocos de Código em Python**
+### **README: Explicação dos Blocos de Código em Python**
 
-Este documento fornece explicações detalhadas de três diferentes blocos de código em Python, com foco nos conceitos de variáveis, strings, números inteiros, concatenação, repetição, e operações matemáticas. Cada bloco de código aborda um exercício específico, facilitando o entendimento de conceitos fundamentais na programação em Python.
+Este documento fornece uma explicação detalhada de três blocos de código em Python, cada um com funcionalidades diferentes, mas fundamentais para o aprendizado da linguagem. Vamos analisar cada bloco, explicando como ele funciona e quais conceitos são abordados.
+
+---
 
 ## **Bloco de Código 1: Concatenando Nome e Sobrenome**
 
@@ -15,20 +17,19 @@ print(nome_completo)
 ```
 
 ### **Explicação:**
-Este bloco de código solicita ao usuário que insira seu nome e sobrenome, e em seguida concatena esses dois valores com um espaço entre eles para formar o nome completo.
 
-- **nome** e **sobrenome**: Variáveis que armazenam as strings fornecidas pelo usuário.
-- **nome_completo**: Variável que armazena a concatenação de `nome`, um espaço `" "`, e `sobrenome`.
-- **print(nome_completo)**: Exibe o nome completo na tela.
+1. **Entrada de Dados:**
+   - `nome = input("Digite seu nome: ")` e `sobrenome = input("Digite seu sobrenome: ")` solicitam ao usuário que insira seu nome e sobrenome. Os valores digitados são armazenados nas variáveis `nome` e `sobrenome`, respectivamente.
 
-### **Exemplo de Execução:**
-```bash
-Digite seu nome: Patricia
-Digite seu sobrenome: Queiroz
-Patricia Queiroz
-```
+2. **Concatenação:**
+   - `nome_completo = nome + " " + sobrenome` concatena as strings `nome` e `sobrenome`, adicionando um espaço `" "` entre elas. O resultado é armazenado na variável `nome_completo`.
 
-## **Bloco de Código 2: Repetição de Texto com Multiplicação**
+3. **Saída:**
+   - `print(nome_completo)` exibe o nome completo do usuário, com o espaço entre o nome e o sobrenome.
+
+---
+
+## **Bloco de Código 2: Repetindo uma String**
 
 ### **Código:**
 ```python
@@ -42,18 +43,18 @@ print((texto + " ") * numero)
 ```
 
 ### **Explicação:**
-Este bloco de código solicita ao usuário uma string e um número inteiro, e então repete a string o número de vezes especificado.
 
-- **texto**: Variável que armazena a string fornecida pelo usuário.
-- **numero**: Variável que armazena o número inteiro fornecido pelo usuário.
-- **print((texto + " ") * numero)**: Exibe a string `texto` repetida `numero` vezes, com um espaço adicionado após cada repetição.
+1. **Entrada de Dados:**
+   - `texto = input("Digite uma palavra ou frase: ")` solicita ao usuário que insira uma palavra ou frase, armazenando o valor na variável `texto`.
+   - `numero = int(input("Digite um número inteiro: "))` solicita ao usuário que insira um número inteiro, que é armazenado na variável `numero` após ser convertido para o tipo `int`.
 
-### **Exemplo de Execução:**
-```bash
-Digite uma palavra ou frase: Python
-Digite um número inteiro: 3
-Python Python Python 
-```
+2. **Concatenação e Repetição:**
+   - `print((texto + " ") * numero)` concatena a string `texto` com um espaço `" "` e multiplica essa concatenação pelo valor de `numero`. Isso resulta em `numero` repetições da string `texto`, separadas por espaços.
+
+3. **Saída:**
+   - O resultado da operação é impresso na tela, repetindo a string digitada pelo usuário o número de vezes especificado.
+
+---
 
 ## **Bloco de Código 3: Calculadora Simples**
 
@@ -67,7 +68,7 @@ if operacao == "+":
     print(num1 + num2)
 
 elif operacao == "-":
-    print(num1 - num2)
+    print(abs(num1 - num2))
 
 elif operacao == "*":
     print(num1 * num2)
@@ -80,21 +81,18 @@ else:
 ```
 
 ### **Explicação:**
-Este bloco de código implementa uma calculadora simples que realiza adição, subtração, multiplicação ou divisão, dependendo da operação escolhida pelo usuário.
 
-- **num1** e **num2**: Variáveis que armazenam os números inteiros fornecidos pelo usuário.
-- **operacao**: Variável que armazena o símbolo da operação escolhida (`+, -, *, /`).
-- **if/elif/else**: Estruturas de controle que determinam qual operação será realizada com base na escolha do usuário. O código realiza a operação correspondente e exibe o resultado. Se a operação for inválida, uma mensagem de erro é exibida.
+1. **Entrada de Dados:**
+   - `num1 = int(input("Digite um numero: "))` e `num2 = int(input("Digite outro numero: "))` solicitam ao usuário que insira dois números inteiros. Esses valores são armazenados nas variáveis `num1` e `num2`.
+   - `operacao = input("Qual operação deseja fazer(+, -, *, /) : ")` solicita ao usuário que escolha uma operação matemática (adição, subtração, multiplicação ou divisão) e armazena o valor na variável `operacao`.
 
-### **Exemplo de Execução:**
-```bash
-Digite um numero: 10
-Digite outro numero: 5
-Qual operação deseja fazer(+, -, *, /) : *
-50
-```
+2. **Estrutura Condicional (if-elif-else):**
+   - O bloco `if-elif-else` avalia a operação escolhida:
+     - Se `operacao` for `"+"`, realiza a adição (`print(num1 + num2)`).
+     - Se `operacao` for `"-"`, realiza a subtração e imprime o valor absoluto do resultado (`print(abs(num1 - num2))`).
+     - Se `operacao` for `"*"`, realiza a multiplicação (`print(num1 * num2)`).
+     - Se `operacao` for `"/"`, realiza a divisão (`print(num1 / num2)`).
+     - Se o usuário digitar uma operação inválida, imprime uma mensagem de erro (`print("Operação digitada inválida")`).
 
-## **Resumo**
-
-Esses três blocos de código são exemplos práticos de como trabalhar com entradas do usuário, manipulação de strings, repetição de operações, e cálculos matemáticos em Python. Eles ilustram conceitos importantes de programação, que são essenciais para qualquer desenvolvedor iniciante.
-
+3. **Saída:**
+   - Dependendo da operação escolhida pelo usuário, o resultado correspondente é exibido. Se a operação for inválida, o código informa ao usuário que a operação digitada não é reconhecida.
