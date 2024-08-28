@@ -3,6 +3,6 @@
 nome = input("Digite seu nome: ")
 sobrenome = input("Digite seu sobrenome: ")
 
-apelido = nome + sobrenome
+nome_completo = nome + " " + sobrenome
 
-print(apelido)
+print(nome_completo)
